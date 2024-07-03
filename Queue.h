@@ -11,6 +11,7 @@ public:
     int dequeue();
     Queue();
     ~Queue();
+    bool isEmpty();
 };
 
 
@@ -39,7 +40,7 @@ int Queue::dequeue(){
       delete t;
       --size;
      
-
+     cout<<"Dequeing "<<value<<endl;
      return value;
   }
   cout<<"Empty queue";
@@ -49,9 +50,9 @@ int Queue::dequeue(){
 
 Queue::Queue(){
     //initialize Queue
-  size = 0;
   headPtr = nullptr;
   tailPtr = nullptr;
+  size = 0; 
   }
 
 Queue::~Queue(){
